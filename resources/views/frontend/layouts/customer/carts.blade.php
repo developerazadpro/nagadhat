@@ -40,10 +40,10 @@
                         </td>
                         <td class="cart_quantity">
                             <div class="cart_quantity_button">
-                                <a class="cart_quantity_down update-cart" data-status="dec" href=""> - </a>
+                                <a class="cart_quantity_down update-cart" data-status="dec" href="#"> - </a>
                                 <input class="cart_quantity_input qty" type="text" name="quantity" value="{{ $cart->qty }}" autocomplete="off" size="2">
                                 <input class="rowId" type="hidden" name="rowId" value="{{ $cart->rowId }}" >
-                                <a class="cart_quantity_up update-cart" data-status="inc" href=""> + </a>
+                                <a class="cart_quantity_up update-cart" data-status="inc" href="#"> + </a>
                             </div>
                         </td>
                         <td class="cart_price">

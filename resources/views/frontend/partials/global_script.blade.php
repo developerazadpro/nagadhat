@@ -40,13 +40,14 @@
         let rowId   = thisRow.find('.rowId').val();
         let qty     = thisRow.find('.qty').val();
 
-        if(status==='inc'){
+        if(status === 'inc'){
             qty = ++qty;
         }else{
             if(qty>1){
                 qty = --qty;
             }
         }
+
         let url   = '{{ url('update-cart') }}'+'/'+rowId;
         let token = '{{ csrf_token() }}';
         $.ajax({
@@ -77,14 +78,6 @@
 
         });
 
-    });
-
-    // single shipping method check
-    $(document).on('click', '.shipping_method', function () {
-        $('.shipping_method').not(this).prop('checked', false);
-    });
-    $(document).on('click', '.payment_method', function () {
-        $('.payment_method').not(this).prop('checked', false);
     });
 
     $(document).on('click', '.confirm-order', function () {

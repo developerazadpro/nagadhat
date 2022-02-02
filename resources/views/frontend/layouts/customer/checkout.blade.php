@@ -67,7 +67,8 @@
                         <div class="heading">
                             <h3>Payment Method</h3>
                         </div>
-                        <p><input type="checkbox" name="payment_method" class="payment_method" value="cod" checked> Cash On Delivery(COD)</p>
+                        <p><input type="radio" name="payment_method" class="payment_method" value="cod" checked> Cash On Delivery(COD)</p>
+                        <p><input type="radio" name="payment_method" class="payment_method" value="bKash" checked> bKash</p>
 
                         <br>
                         <p><input type="checkbox" name="agree_fg" checked> I agree with your <a href="#">terms and conditions</a>.</p>
