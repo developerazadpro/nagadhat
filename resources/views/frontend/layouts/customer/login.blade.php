@@ -1,4 +1,4 @@
-@extends('public.layouts.master')
+@extends('frontend.layouts.master')
 <style>
     .cart_product {
         display: block;

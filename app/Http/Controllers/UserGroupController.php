@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 
 class UserGroupController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -27,25 +23,16 @@ class UserGroupController extends Controller
             'modalTitle' => 'Add New User Group',
         ];
         $groups = UserGroup::all();
-        return view('admin.layouts.accessControl.userGroups.index', compact('groups','header'));
+        return view('backend.layouts.accessControl.userGroups.index', compact('groups','header'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        return view('admin.layouts.accessControl.userGroups.create');
+        return view('backend.layouts.accessControl.userGroups.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
 
@@ -62,36 +49,14 @@ class UserGroupController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $group = UserGroup::find($id);
-        return view('admin.layouts.accessControl.userGroups.edit', compact('group'));
+        return view('backend.layouts.accessControl.userGroups.edit', compact('group'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         $userGroup = UserGroup::find($id);
@@ -107,12 +72,7 @@ class UserGroupController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         $userGroup = UserGroup::find($id);

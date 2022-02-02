@@ -16,86 +16,17 @@ use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $customerId = session('customer_id');
         $customer   = Customer::find($customerId);
-        return view('public.layouts.customer.profile', compact('customer'));
+        return view('frontend.layouts.customer.profile', compact('customer'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
     public function login(){
-        return view('public.layouts.customer.login');
+        return view('frontend.layouts.customer.login');
     }
     public function userValidation(Request $request){
         $email     = $request->input('customer_email');
@@ -184,7 +115,7 @@ class CustomerController extends Controller
     }
 
     public function signUp(){
-        return view('public.layouts.customer.signup');
+        return view('frontend.layouts.customer.signup');
 
     }
 
@@ -216,8 +147,6 @@ class CustomerController extends Controller
         $customerId = session('customer_id');
         $customer   = Customer::find($customerId);
 
-        //dd($customer);
-
         if($_POST){
             $data = array(
                 'customer_name'     => $request->input('customer_name'),
@@ -231,20 +160,20 @@ class CustomerController extends Controller
                 return redirect('customer-profile')->with('success', 'Profile updated successfully.');
             }
         }
-        return view('public.layouts.customer.updateProfile', compact('customer'));
+        return view('frontend.layouts.customer.updateProfile', compact('customer'));
     }
 
     // order status tracking
     public function orderTrack(){
         $customerId = session('customer_id');
         $orders     = OrderManage::where('customer_id',$customerId)->where('order_status', '!=', 'D')->get();
-        return view('public.layouts.customer.orders', compact('orders'));
+        return view('frontend.layouts.customer.orders', compact('orders'));
     }
 
 
     public function orderDetails($orderId){
         $order_details = OrderDetails::where('ordermst_id', $orderId)->get();
-        return view('public.layouts.customer.order_details', compact('order_details'));
+        return view('frontend.layouts.customer.order_details', compact('order_details'));
     }
 
 }

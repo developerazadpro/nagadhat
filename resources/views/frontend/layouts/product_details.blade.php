@@ -1,4 +1,4 @@
-@extends('public.layouts.master')
+@extends('frontend.layouts.master')
 <style>
     .add-cart {
         padding: 4px 6px!important;

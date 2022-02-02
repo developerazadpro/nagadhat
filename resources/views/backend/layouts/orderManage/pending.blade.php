@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('backend.layouts.master')
 <?php
     use App\Customer AS Customer;
 ?>

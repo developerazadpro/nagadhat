@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | EShop</title>
+    <title>Home | Nagadhat</title>
     <link href="{{ asset('assets/fontend/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fontend/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fontend/css/prettyPhoto.css') }}" rel="stylesheet">
@@ -99,14 +99,7 @@
         padding: 4px 6px!important;
         font-size: 12px!important;
     }
-    /*.productinfo img {
-        width: 100px!important;
-        height: 115px!important;
-    }*/
-    /*.view-product img{*/
-    /*width: 100%;*/
-    /*height: 230px!important;*/
-    /*}*/
+
     .item-control i{
         background: #0A27A9!important;
     }
@@ -118,7 +111,7 @@
 <body>
 <header id="header"><!--header-->
 
-    @include('public.inc.header')
+    @include('frontend.partials.header')
 
 </header><!--/header-->
 
@@ -155,6 +148,6 @@
 <script src="{{ asset('assets/fontend/js/jquery.prettyPhoto.js') }}"></script>
 <script src="{{ asset('assets/fontend/js/main.js') }}"></script>
 
-@include('public.inc.global_script');
+@include('frontend.partials.global_script');
 </body>
 </html>

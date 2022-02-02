@@ -1,4 +1,4 @@
-@extends('public.layouts.master')
+@extends('frontend.layouts.master')
 <style>
     .recommended-item-control i {
         background: none repeat scroll 0 0 #00BCD4!important;

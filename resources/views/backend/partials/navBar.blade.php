@@ -28,7 +28,7 @@
 
                             <p>
                                 Azharul Islalm - Web Developer
-                                <small>Member since Nov. 2012</small>
+                                <small>Member since Jan. 2022</small>
                             </p>
                         </li>
                         <!-- Menu Body -->

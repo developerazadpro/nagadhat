@@ -31,7 +31,7 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-tasks"></i>
+                    <i class="fa fa-users"></i>
                     <span>User</span>
                     <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
@@ -44,7 +44,7 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-tasks"></i>
+                    <i class="fa fa-user"></i>
                     <span>User Group</span>
                     <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>

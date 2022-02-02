@@ -1,4 +1,4 @@
-@extends('public.layouts.master')
+@extends('frontend.layouts.master')
 <style>
     .update, .check_out{
         margin-left: 0!important;
@@ -36,7 +36,7 @@
     <section id="do_action">
             <div class="row" style="margin:0!important;">
                 <div class="col-md-3">
-                    @include('public.layouts.customer.menus')
+                    @include('frontend.layouts.customer.menus')
                 </div>
                 <div class="col-md-9">
                     <div class="shopper-info">

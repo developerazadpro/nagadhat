@@ -46,9 +46,9 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    @include('admin.inc.navBar')
+    @include('backend.partials.navBar')
     <!-- Left side column. contains the logo and sidebar -->
-    @include('admin.inc.sidebar')
+    @include('backend.partials.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -74,8 +74,8 @@
 
             </section>
 
-            @include('admin.inc.messages')
-            @include('admin.layouts.global.modal')
+            @include('backend.partials.messages')
+            @include('backend.layouts.global.modal')
             @yield('content')
 
         </div>
