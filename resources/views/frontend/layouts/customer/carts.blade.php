@@ -21,10 +21,11 @@
                     <thead>
                     <tr class="cart_menu">
                         <td class="image">Item</td>
-                        <td class="description"></td>
+                        <td class="description">Name</td>
                         <td class="quantity">Quantity</td>
                         <td class="price">Unit Price</td>
                         <td class="total">Total</td>
+                        <td class="total">Remove</td>
                         <td></td>
                     </tr>
                     </thead>
