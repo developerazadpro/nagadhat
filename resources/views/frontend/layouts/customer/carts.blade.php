@@ -37,7 +37,7 @@
                             <a href="{{ url('product-details/'.$cart->id) }}"><img src="{{ $cart->options->image_url }}" style="height: 110px;width: 110px;" alt=""></a>
                         </td>
                         <td class="cart_description">
-                            <h4><a href=""> {{ $cart->name }}</a></h4>
+                            <h5><a href=""> {{ $cart->name }}</a></h5>
                         </td>
                         <td class="cart_quantity">
                             <div class="cart_quantity_button">
@@ -48,11 +48,11 @@
                             </div>
                         </td>
                         <td class="cart_price">
-                            <h4>৳ {{ $cart->price }}</h4>
+                            <h5>৳ {{ $cart->price }}</h5>
                         </td>
 
                         <td class="cart_total">
-                            <h4>৳ {{ $cart->total }}</h4>
+                            <h5>৳ {{ $cart->total }}</h5>
                         </td>
                         <td class="cart_delete" style="margin-right: 0!important;">
                             <a class="cart_quantity_delete" href="{{ url('remove-cart/'.$cart->rowId) }}"><i class="fa fa-times"></i></a>
@@ -61,11 +61,11 @@
                     @endforeach
 
                     <tr class="bg-success">
-                        <td class="text-center"><h4>Cart Sub Total</h4></td>
+                        <th class="text-center"><h4>Cart Sub Total</h4></th>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><h4>৳ {{ Cart::subtotal() }}</h4></td>
+                        <th><h5>৳ {{ Cart::subtotal() }}</h5></th>
                     </tr>
                     </tbody>
                 </table>
