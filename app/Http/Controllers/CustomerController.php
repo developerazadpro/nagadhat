@@ -65,7 +65,6 @@ class CustomerController extends Controller
             'customer_district' => $request->input('customer_district'),
             'customer_phone'    => $request->input('customer_phone')
         );
-        // if user not exist add user else not
         $customerId = $request->input('customer_id');
 
         $totalAmount = Cart::total();

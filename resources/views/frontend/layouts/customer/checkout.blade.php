@@ -55,14 +55,14 @@
                             <h3>Delivery Type</h3>
                         </div>
                         <p>
-                            <input type="checkbox" name="shipping_method" class="shipping_method" value="insight" checked>
+                            <input type="radio" name="shipping_method" class="shipping_method" value="insight" checked>
                             Regular Home Delivery within 1 - 3 days in Dhaka City, Free</p>
                         <p>
-                            <input type="checkbox" name="shipping_method" class="shipping_method" value="outside">
+                            <input type="radio" name="shipping_method" class="shipping_method" value="outside">
                             Regular Home Delivery within 1 - 3 days outside of Dhaka City, 200 BDT</p>
                         <p>
-                            <input type="checkbox" name="shipping_method" class="shipping_method" value="express">
-                            Express Home Delivery on same day in Dhaka City, 200 BDT</p>
+                            <input type="radio" name="shipping_method" class="shipping_method" value="express">
+                            Express Home Delivery on same day in Dhaka City, 300 BDT</p>
 
                         <div class="heading">
                             <h3>Payment Method</h3>
