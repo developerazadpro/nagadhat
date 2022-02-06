@@ -47,12 +47,17 @@
                             <input type="hidden" class="product-title" value="{{ $product['title'] }}">
                             <input type="hidden" class="product-price" value="{{ $product['price'] }}">
                             <input type="hidden" class="product-image-url" value="{{ $product['image_url'] }}">
-
+                            @if(Session::get('customer_name'))
                             <button type="button" class="btn btn-default cart add-to-cart">
                                 <i class="fa fa-shopping-cart"></i>
                                 Add to cart
                             </button>
-
+                            @else
+                            <a href="{{ url('customer-login') }}"><button type="button" class="btn btn-default cart add-cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                Add to cart
+                            </button></a>
+                            @endif
 					</span>
                 </div><!--/product-information-->
             </div>

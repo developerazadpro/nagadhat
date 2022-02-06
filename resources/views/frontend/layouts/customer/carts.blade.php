@@ -82,7 +82,12 @@
                         <li>Total <span>৳ {{ Cart::total() }}</span></li>
                     </ul>
                     <a class="btn btn-default update" href="{{ url('/') }}">Continue Shopping</a>
-                    <a class="btn btn-default check_out pull-right" href="{{ url('checkout') }}">Check Out</a>
+
+                    @if(Session::get('customer_name'))
+                        <a class="btn btn-default check_out pull-right" href="{{ url('checkout') }}">Check Out</a>
+                    @else
+                        <a class="btn btn-default check_out pull-right" href="{{ url('customer-login') }}">Check Out</a>
+                    @endif
                 </div>
             </div>
     </section>
